@@ -1,0 +1,127 @@
+QuizMaster - Advanced Quiz Application
+===================================
+
+This is a modern, feature-rich quiz application that allows users to upload their own question banks and take tests with customizable settings.
+
+Key Features
+-----------
+1. Question Bank Upload Support:
+   - JSON format
+   - CSV format
+   - TXT format
+   - Image files (JPG, JPEG, PNG)
+   - PDF files
+
+2. Timer Control:
+   - Customizable duration from 1 to 2000 minutes
+   - Default setting: 30 minutes
+   - Real-time countdown display
+   - Auto-submit when time expires
+
+3. Navigation Features:
+   - Previous/Next question navigation
+   - Question panel for quick jumping between questions
+   - Color-coded question status:
+     * Blue: Current question
+     * Green: Attempted
+     * Yellow: Marked for review
+
+4. Question Management:
+   - Save & Next functionality
+   - Clear Response option
+   - Mark for Review feature
+   - Final Submit button
+
+5. Summary Screen:
+   - Total questions
+   - Questions attempted
+   - Questions marked for review
+   - Time taken
+
+File Format Guidelines
+--------------------
+1. JSON Format:
+   ```json
+   [
+     {
+       "question": "What is 2 + 2?",
+       "options": ["3", "4", "5", "6"],
+       "correctAnswer": "4"
+     }
+   ]
+   ```
+
+2. CSV Format:
+   ```
+   Question,Option1,Option2,Option3,Option4,CorrectAnswer
+   What is 2 + 2?,3,4,5,6,4
+   ```
+
+3. TXT Format:
+   ```
+   Q: What is 2 + 2?
+   A: 3
+   A: 4
+   A: 5
+   A: 6
+   Correct: 4
+   ```
+
+How to Run the Application
+------------------------
+1. Simply open the index.html file in a modern web browser
+   - Double click the index.html file, or
+   - Drag and drop index.html into your browser, or
+   - Use a local server (recommended):
+     ```
+     python -m http.server 8000
+     ```
+     Then visit: http://localhost:8000
+
+2. Upload your question bank:
+   - Click "Choose File" button
+   - Select your question file (JSON/CSV/TXT/PDF/Image)
+   - The application will automatically parse the file
+
+3. Set the timer:
+   - Enter desired duration in minutes (1-2000)
+   - Default is 30 minutes
+
+4. Start the quiz:
+   - Click "Start Quiz" button
+   - Timer will begin immediately
+
+Using the Application
+-------------------
+1. Navigation:
+   - Use "Previous" and "Next" buttons
+   - Click question numbers in the navigation panel
+   - Questions are color-coded for easy tracking
+
+2. Answering Questions:
+   - Click on an option to select it
+   - Use "Clear Response" to remove selection
+   - "Mark for Review" for questions to revisit
+
+3. Submitting:
+   - Click "Submit Quiz" when finished
+   - Quiz auto-submits when timer expires
+   - Review summary screen after submission
+
+Technical Details
+---------------
+- Built with HTML5, CSS3, and JavaScript
+- Uses Tailwind CSS for styling
+- Responsive design works on all devices
+- No backend required - runs entirely in browser
+- Supports modern browsers (Chrome, Firefox, Safari, Edge)
+
+Best Practices
+------------
+1. Always prepare question bank files according to the specified formats
+2. Use a local server for better performance
+3. Keep backup of question banks
+4. Test the question bank file before actual quiz
+5. Ensure stable internet connection if running via server
+
+Note: This application runs entirely in the browser and doesn't save results permanently. Make sure to save or record results if needed before closing the browser.
